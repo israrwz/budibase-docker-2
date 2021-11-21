@@ -1,7 +1,7 @@
 deploy:
-  - okteto build -t okteto.dev/budibase:${OKTETO_GIT_COMMIT} budibase
-  - okteto build -t okteto.dev/envoy:${OKTETO_GIT_COMMIT} envoy
+  - okteto build -t okteto.dev/budibase:${OKTETO_GIT_COMMIT} hosting 
+  - okteto build -t okteto.dev/envoy:${OKTETO_GIT_COMMIT} hosting
 
 devs:
-  - docker-compose.yaml 
-  - envoy.yaml
+  - hosting/docker-compose.yaml 
+  - hosting/envoy.yaml

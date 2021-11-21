@@ -1,6 +1,3 @@
 deploy:
-  - helm upgrade --install budibase chart --set tag=${OKTETO_GIT_COMMIT}
-
-devs:
-  - budibase/Chart.yaml
-  - envoy/
+  - kubectl apply -f budibase
+  - kebectl apply -f envoy

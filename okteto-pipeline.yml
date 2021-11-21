@@ -1,3 +1,3 @@
 deploy:
-  - kubectl apply -f budibase --validate=false
-  - kebectl apply -f envoy --validate=false
+  - kubectl apply -f hosting --validate=false
+#  - kebectl apply -f envoy --validate=false

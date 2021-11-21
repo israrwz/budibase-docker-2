@@ -1,0 +1,8 @@
+deploy:
+  - okteto build -t okteto.dev/budibase:${OKTETO_GIT_COMMIT} budibase
+  - okteto build -t okteto.dev/envoy:${OKTETO_GIT_COMMIT} envoy
+  - helm upgrade --install budibase chart --set tag=${OKTETO_GIT_COMMIT}
+
+devs:
+  - budibase/
+  - envoy/envoy.yaml
